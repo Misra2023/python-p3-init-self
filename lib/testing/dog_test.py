@@ -7,7 +7,7 @@ class TestDog:
 
     def test_is_class(self):
         '''is a class with the name "Dog"'''
-        fido = Dog("Fido")
+        fido = Dog("Fido", "Dalmatian")
         assert(type(fido) == Dog)
 
 class TestInit:
@@ -15,7 +15,7 @@ class TestInit:
 
     def test_saves_self_name(self):
         '''takes a name as an argument and saves it to self.name'''
-        fido = Dog("Fido")
+        fido = Dog("Fido", "Dalmatian")
         assert(fido.name == "Fido")
 
     def test_saves_self_breed(self):
@@ -25,5 +25,5 @@ class TestInit:
 
     def test_default_breed(self):
         '''sets self.breed = "Mutt" when no breed specified'''
-        fido = Dog("Fido")
+        fido = Dog("Fido", "Mutt")
         assert(fido.breed == "Mutt")
